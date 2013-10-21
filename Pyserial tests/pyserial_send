@@ -1,0 +1,34 @@
+import serial
+import time
+
+def main():
+    arduino = serial.Serial()
+    arduino.port = 'COM3'
+    arduino.baudrate = 19200
+    arduino.parity = serial.PARITY_NONE
+    arduino.bytesize = serial.EIGHTBITS
+    arduino.stopbits = serial.STOPBITS_ONE
+    arduino.timeout = 10
+    arduino.xonxoff = False
+    arduino.rtscts = False
+    arduino.dsrdtr = False
+
+    arduino.open()
+
+    arduino.readline()
+
+    arduino.write("a".encode('ascii'))
+    value = arduino.readline
+    print value
+    arduino.write("b".encode('ascii'))
+    value = arduino.readline
+    print value
+    print arduino.readline
+
+    arduino.close
+
+if __name__ == "__main__":
+    main()
+    
+
+

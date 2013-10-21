@@ -1,0 +1,9 @@
+import serial
+ser = serial.Serial(2)  # open first serial port
+#print ser
+print ser.portstr       # check which port was really used
+#ser.write("n")      # write a string
+#ser.close()             # close port
+from serial import Serial
+byte = ser.Read(1)
+print byte

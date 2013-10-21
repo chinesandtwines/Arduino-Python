@@ -1,0 +1,14 @@
+## Open a serial connection with Arduino.
+
+import serial, time
+ser = serial.Serial("COM3", 9600)   # open serial port that Arduino is using
+print ser                           # print serial config
+
+time.sleep(1)
+
+print "Sending serial data"
+ser.write("Hello World")
+
+# Reminder to close the connection when finished
+if(ser.isOpen()):
+    print "Serial connection is still open."

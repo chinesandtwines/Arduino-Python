@@ -1,0 +1,9 @@
+import serial
+ser = serial.Serial(2, 9600)  # open first serial port
+
+
+while True:
+    print ser.readline()
+    '1 Hello World!\r\n'
+    '2 Hello World!\r\n'
+    '3 Hello world!\r\n'

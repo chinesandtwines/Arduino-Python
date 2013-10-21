@@ -1,0 +1,14 @@
+import serial
+
+connected = False
+
+ser = serial.Serial("COM3", 9600, timeout=5)
+
+ser.write("1")
+
+char = 'a'
+
+serial.write('a')
+print "->", serial.readline().rstrip('\r').rstrip('\n')
+
+ser.close()
